@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: salmon;
+        }
+        form{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            color: lightblue;
+        }
+        p{
+            text-align: center;
+        }
+       div{
+        color: black;
+       }
+       .animation{
+        height: 30px;
+        padding-top: 15px;
+        width: 120px;
+        background-color: blue;
+        animation-name: myra;
+        animation-duration: 4s;
+        color: orange;
+        animation-iteration-count: infinite;
+        position: absolute;
+       }
+       @keyframes myra {   
+        0% {
+            background-color: blue;
+            color: orangered;
+            top: 0px ;
+            left: 0px;
+        }
+        25%{
+            background-color: pink;
+            color: brown;
+            top: 0px;
+            left:90%;
+
+        }
+        50%{
+            background-color: orange;
+            top: 90%;
+            left: 90%;
+        }
+        
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Equipment Application</h2>
+        <form>
+            First Name:<br>
+            <input type="Name"><br>
+            Last Name:<br>
+            <input type="name"><br>
+            Email:<br>
+            <input type="email"><br>
+            Password:<br>
+            <input type="password"><br>
+            Date of Birth:<br>
+            <input type="date"><br>
+            <br>
+            <input type="submit" value="Click Here to open your Application"><br><br>
+            <input type="reset"><br>
+        </form>
+        <p>Please pick a number between 1-10!!!</p>
+      <center>  <input id="number" class="a1"><br>
+        <button type="button" onclick="validate()" class="a1">Submit</button></center>
+        <p id="para"></p>
+        <script>
+            function validate(){
+                var a,b;
+                a=document.getElementById("number").value;
+                if (a>=1 && a<=10){
+                  b="Input is able to work!"
+                }else{
+                  b="Input is unable to work!";
+                }
+                document.getElementById("para").innerHTML=b;
+
+            }
+          
+        </script>
+    </div>
+    <div class="animation">
+        Hosting the website
+    </div>
+</body>
+</html>
